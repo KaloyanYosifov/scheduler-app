@@ -5,7 +5,8 @@ const plugins = [
     {
       "alias": {
         "@": "./src",
-        "@comp": "./src/components"
+        "@comp": "./src/components",
+        "@styles": "./src/styles"
       }
     }
   ]
