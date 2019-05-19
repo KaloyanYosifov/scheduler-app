@@ -5,10 +5,22 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 // styles
 import ButtonStyles from '@styles/ButtonStyles';
 
-const renderButton = (children, style, icon) => {
+const renderButton = (
+    {
+        children,
+        style = {},
+        icon = false,
+        onPress = () => { }
+    }
+) => {
     if (icon) {
         return (
-            <FontAwesome.Button style={{ ...ButtonStyles.main, ...style }} color="#569cbc" name={icon}>
+            <FontAwesome.Button
+                onPress={onPress}
+                style={{ ...ButtonStyles.main, ...style }}
+                color="#569cbc"
+                name={icon}
+            >
                 {children}
             </FontAwesome.Button>
         );
@@ -16,15 +28,15 @@ const renderButton = (children, style, icon) => {
 
     return (
         <View style={{ ...ButtonStyles.main, ...style }}>
-            <TouchableNativeFeedback>
+            <TouchableNativeFeedback onPress={onPress}>
                 {children}
             </TouchableNativeFeedback>
         </View>
     );
 }
 
-const Button = ({ children, style = {}, icon = false }) => {
-    return renderButton(children, style, icon);
+const Button = (props) => {
+    return renderButton(props);
 };
 
 export default Button;

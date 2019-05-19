@@ -6,9 +6,15 @@ export default StyleSheet.create({
         height: '100%'
     },
     buttonGroup: {
-        flex: .5
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    button: {
+        padding: 15,
     },
     buttonText: {
-        color: "#fff"
+        color: "#fff",
+        fontSize: 16
     }
 });

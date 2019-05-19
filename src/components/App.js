@@ -13,8 +13,8 @@ class App extends React.Component {
         return (
             <Shell shellStyles={AppStyles.main}>
                 <View style={AppStyles.buttonGroup}>
-                    <Button icon="facebook">
-                        <Text style={AppStyles.buttonText}>Hello mama</Text>
+                    <Button style={AppStyles.button} icon="cog">
+                        <Text style={AppStyles.buttonText}>Settings</Text>
                     </Button>
                 </View>
             </Shell>
