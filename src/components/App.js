@@ -13,7 +13,11 @@ class App extends React.Component {
         return (
             <Shell shellStyles={AppStyles.main}>
                 <View style={AppStyles.buttonGroup}>
-                    <Button style={AppStyles.button} icon="cog">
+                    <Button
+                        onPress={() => { this.props.navigation.navigate('Settings') }}
+                        style={AppStyles.button}
+                        icon="cog"
+                    >
                         <Text style={AppStyles.buttonText}>Settings</Text>
                     </Button>
                 </View>
