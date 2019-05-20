@@ -7,11 +7,13 @@ export default StyleSheet.create({
     },
     buttonGroup: {
         flex: 1,
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
     button: {
-        padding: 15,
+        marginHorizontal: 10,
+        padding: 15
     },
     buttonText: {
         color: "#fff",

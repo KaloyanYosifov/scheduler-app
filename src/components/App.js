@@ -14,6 +14,14 @@ class App extends React.Component {
             <Shell shellStyles={AppStyles.main}>
                 <View style={AppStyles.buttonGroup}>
                     <Button
+                        onPress={() => { this.props.navigation.navigate('Scheduler') }}
+                        style={AppStyles.button}
+                        icon="clock-o"
+                    >
+                        <Text style={AppStyles.buttonText}>Scheduler</Text>
+                    </Button>
+
+                    <Button
                         onPress={() => { this.props.navigation.navigate('Settings') }}
                         style={AppStyles.button}
                         icon="cog"

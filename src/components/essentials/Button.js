@@ -17,6 +17,7 @@ const renderButton = (
         return (
             <FontAwesome.Button
                 onPress={onPress}
+                backgroundColor="transparent"
                 style={{ ...ButtonStyles.main, ...style }}
                 color="#569cbc"
                 name={icon}
